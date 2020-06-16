@@ -19,6 +19,9 @@ export class ProductsBlockTwoComponent implements OnInit {
     navigation: true,
     loop: true,
     breakpoints: {
+      1100: {
+        slidesPerView: 4
+      },
       1024: {
         slidesPerView: 3
       },
