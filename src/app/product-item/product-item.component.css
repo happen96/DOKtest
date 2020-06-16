@@ -1,0 +1,124 @@
+p {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  color: #333333;
+  margin-bottom: 4px;
+}
+span {
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  color: #333333;
+  opacity: .5;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 280px;
+  min-height: 95px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.item-wrap {
+  max-width: 330px;
+  width: 100%;
+}
+.item-wrap:hover {
+  box-shadow: 0 0 30px 0 rgba(122, 122, 122, 0.28);
+  border-bottom: unset;
+}
+.item-wrap:hover .arrow-wrap {
+  background-color: #1a77d2;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transform: translate(6px, 0);
+}
+.item-wrap:hover svg {
+  color: #ffffff;
+}
+.item-wrap:hover p {
+  color: #1a77d2;
+}
+.item-info {
+  padding: 19px 10px 0 29px;
+}
+.arrow {
+  padding-top: 22px;
+}
+.arrow-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+svg {
+  height: 11px;
+  width: 11px;
+  color: #333333;
+}
+.product-block {
+  position: relative;
+  margin-bottom: 59px;
+}
+img.like {
+  position: absolute;
+  bottom: -6%;
+  left: 84%;
+}
+.products {
+  max-width: 270px;
+}
+.product-title p {
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: 0.5px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.product-title p.title {
+  color: #1a77d2;
+}
+.product-rate {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.rate {
+  margin-right: 5px;
+}
+.product-info {
+  display:  flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.submit {
+  font-size: 13px;
+  line-height: 1.54;
+  letter-spacing: normal;
+  width: 120px;
+}
+
+
+
+@media only screen and (max-width: 980px) {
+  .arrow-wrap {
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .item-wrap, .item {
+    max-width: unset;
+  }
+}
+

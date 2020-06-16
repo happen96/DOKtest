@@ -1,0 +1,43 @@
+<div class="item-wrap" *ngIf="blockType === typeOne">
+  <div class="item" (mouseover)="showAvailable=true" (mouseout)="showAvailable=false">
+    <div class="item-info">
+      <p>Запчасти на {{product.brand_name}}</p>
+      <span *ngIf="!showAvailable"></span>
+      <span *ngIf="showAvailable">более {{product.available}}</span>
+    </div>
+    <div class="arrow">
+      <div class="arrow-wrap">
+        <svg class="bi bi-chevron-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="products" *ngIf="blockType === typeTwo">
+  <div class="product-block">
+    <img src="../../assets/images/image.png" alt="">
+    <img class="like" src="../../assets/images/haert.svg" alt="">
+  </div>
+  <div class="product-title">
+    <p class="title">{{product.brand_name}}</p>
+    <p>{{product.product_title}}</p>
+  </div>
+  <div class="product-rate" *ngIf="product.rating && ratingStar">
+    <div class="rate" *ngFor="let rate of ratingStar">
+      <img *ngIf="convertToNumber(product.rating) < rate" src="../../assets/images/star.svg" alt="">
+      <img *ngIf="convertToNumber(product.rating) >= rate" src="../../assets/images/star-copy-3.svg" alt="">
+    </div>
+    <span *ngIf="convertToNumber(product.rating) > 0">({{product.rating_count}} {{transformText(product.rating_count)}})</span>
+  </div>
+  <div class="product-info">
+    <div class="price">
+      <p>{{product.price}} грн</p>
+      <span *ngIf="product.available !== '0'">Есть в наличии</span>
+      <span *ngIf="product.available === '0'">Под заказ 13 дней</span>
+    </div>
+    <button class="btn btn-primary submit">Купить</button>
+  </div>
+</div>
+

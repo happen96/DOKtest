@@ -1,0 +1,8 @@
+.products-wrap {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+}
+.products-element {
+  padding: 0;
+}

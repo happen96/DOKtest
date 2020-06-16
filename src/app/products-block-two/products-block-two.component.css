@@ -1,0 +1,43 @@
+h1, h2 {
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #000000;
+  margin: 65px 0 39px;
+}
+.products-wrap {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.products-element {
+  padding: 0;
+}
+
+.swiper-container.new-products .swiper-button-prev {
+  display: none;
+}
+.swiper-container.new-products .swiper-button-next.next {
+  color: transparent;
+  top: 56%;
+  right: 0;
+}
+.next img {
+  height: 100%;
+}
+
+@media only screen and (max-width: 769px) {
+  .products-wrap {
+    max-width: 700px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .products-wrap {
+    max-width: 325px;
+  }
+}
+
+

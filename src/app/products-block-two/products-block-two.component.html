@@ -1,0 +1,34 @@
+<div>
+  <div class="products-wrap">
+    <swiper class="swiper-container products-slider" fxFlex="auto" [config]="config" [disabled]="disabled">
+      <div class="products-element swiper-slide" >
+      </div>
+    </swiper>
+
+    <div class="swiper-container new-products" [disabled]="disabled" [swiper]="config">
+      <div class="swiper-wrapper">
+        <div *ngFor="let product of shuffleProducts" class="swiper-slide">
+          <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+            <app-product-item [product]="product" [blockType]="blockType"></app-product-item>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev" [hidden]="config.navigation === false"></div>
+      <div class="swiper-button-next next" [hidden]="config.navigation === false"><img src="../../assets/images/base-color-copy-2.png" alt=""></div>
+    </div>
+
+    <h2>Что-то новенькое</h2>
+
+    <div class="swiper-container new-products" [disabled]="disabled" [swiper]="config">
+      <div class="swiper-wrapper">
+        <div *ngFor="let product of shuffleProducts" class="swiper-slide">
+          <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+            <app-product-item [product]="product" [blockType]="blockType"></app-product-item>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev" [hidden]="config.navigation === false"></div>
+      <div class="swiper-button-next next" [hidden]="config.navigation === false"><img src="../../assets/images/base-color-copy-2.png" alt=""></div>
+    </div>
+  </div>
+</div>
